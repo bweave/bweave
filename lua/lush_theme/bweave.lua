@@ -2,7 +2,7 @@ local lush = require('lush')
 local hsl = lush.hsl
 
 -- Colors based on Panda Syntax palette
-local black = hsl("#17181B")
+local black = hsl("#27282B")
 local white = hsl("#EFEFEF")
 local purple = hsl("#B084EB")
 local blue = hsl("#7DC1FF")
@@ -34,12 +34,12 @@ local theme = lush(function()
     DiffChange { fg = orange },
     DiffDelete { fg = red },
     DiffText { Normal },
-    ErrorMsg { bg = red, fg = black },
+    ErrorMsg { fg = red },
     Float { fg = orange },
     Folded { fg = green },
     Boolean { fg = white },
     Character { fg = red },
-    Conditional { fg = white },
+    Conditional { fg = pink },
     Constant { fg = green },
     Define { fg = pink },
     Function { fg = blue },
@@ -119,4 +119,3 @@ local theme = lush(function()
 end)
 
 return theme
-
