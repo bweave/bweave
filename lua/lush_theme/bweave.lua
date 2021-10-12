@@ -105,14 +105,14 @@ local theme = lush(function()
     htmlEndTag { fg = orange },
     htmlTagName { fg = red },
 
-    yamlBlockMappingKey { fg = red },
+    yamlBlockMappingKey { fg = pink },
     yamlBool { fg = orange },
 
     GitGutterAdd { fg = green },
     GitGutterChange { fg = orange },
     GitGutterDelete { fg = red },
 
-    diffRemoved { fg = red.li(20) },
+    diffRemoved { fg = red.de(40) },
     diffAdded { fg = green.de(40) },
     gitCommitSummary { fg = blue },
   }
