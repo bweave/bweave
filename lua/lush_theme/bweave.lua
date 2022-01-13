@@ -48,7 +48,7 @@ local theme = lush(function()
     Label { Normal },
     NonText { Normal },
     Number { fg = orange },
-    Operator { Normal },
+    Operator { fg = Normal.fg },
     PreProc { fg = blue },
     SignColumn { LineNr },
     Special { fg = green },
