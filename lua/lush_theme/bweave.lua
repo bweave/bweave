@@ -89,6 +89,7 @@ local theme = lush(function()
     jsNumber { fg = orange },
     jsStatement { fg = pink },
     jsVariableDef { fg = blue },
+    jsObjectKey { fg = Normal.fg },
 
     jsxAttrib { fg = orange },
     jsxComponentName { fg = pink },
