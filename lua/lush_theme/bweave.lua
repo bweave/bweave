@@ -15,7 +15,7 @@ local green = hsl("#35FFDC")
 local theme = lush(function()
   return {
     Normal { bg = black, fg = white }, -- normal text
-    CursorLine { bg = Normal.bg.lighten(10) }, -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
+    CursorLine { bg = Normal.bg.lighten(3) }, -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
     Visual { bg = pink, fg = Normal.bg },
     Whitespace { fg = Normal.bg.desaturate(25).lighten(25) },
     Comment { Whitespace, gui="italic" },
@@ -119,6 +119,26 @@ local theme = lush(function()
     diffRemoved { fg = red.de(40) },
     diffAdded { fg = green.de(40) },
     gitCommitSummary { fg = blue },
+
+    -- Barbar buffers and tabs
+    BufferCurrent { fg = green, bg = Normal.bg },
+    BufferCurrentIndex { BufferCurrent },
+    BufferCurrentMod { fg = orange , bg = BufferCurrent.bg },
+    BufferCurrentSign { fg = Comment.fg },
+    BufferCurrentTarget { fg = red },
+    BufferVisible { fg = Comment.fg, bg = Normal.bg.da(40) },
+    BufferVisibleIndex { BufferVisible },
+    BufferVisibleMod { fg = orange.de(50).da(30), bg = BufferVisible.bg },
+    BufferVisibleSign { BufferVisible },
+    BufferVisibleTarget { BufferVisible },
+    BufferInactive { fg = Comment.fg, bg = BufferVisible.bg },
+    BufferInactiveIndex { BufferInactive },
+    BufferInactiveMod { BufferVisibleMod },
+    BufferInactiveSign { BufferInactive },
+    BufferInactiveTarget { BufferInactive },
+    BufferTabpages { fg = Normal.fg, bg = BufferVisible.bg },
+    BufferTabpageFill { fg = Comment.fg, bg = Normal.bg },
+    BufferOffset { BufferTabpageFill },
   }
 end)
 
